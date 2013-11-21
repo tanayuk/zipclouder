@@ -1,6 +1,6 @@
 # Zipclouder
 
-TODO: Write a gem description
+zipcloud API(http://zipcloud.ibsnet.co.jp/doc/api)用のRubyライブラリ
 
 ## Installation
 
@@ -18,7 +18,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    Zipclouder.search(<郵便番号(ハイフンありも可)>)
+
+### ex)
+
+    zipclouder = Zipclouder.search(7830060)
+
+    zipclouder.address
+      #=> "高知県南国市蛍が丘"
+
+    zipclouder.kana
+      #=> "ｺｳﾁｹﾝﾅﾝｺｸｼﾎﾀﾙｶﾞｵｶ"
+
+    zipclouder.pref_code
+      #=> "39"
+
+    zipclouder.zip_code
+      #=> "7830060"
+
+    zipclouder.success?
+      #=> true / false 通信の成功・失敗
+
+    zipclouder.error_message
+      #=> "パラメータ「郵便番号」の桁数が不正です。"
 
 ## Contributing
 
