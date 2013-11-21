@@ -1,6 +1,6 @@
 # Zipclouder
 
-zipcloud API(http://zipcloud.ibsnet.co.jp/doc/api)用のRubyライブラリ
+zipcloud API( http://zipcloud.ibsnet.co.jp/doc/api )用のRubyライブラリ
 
 ## Installation
 

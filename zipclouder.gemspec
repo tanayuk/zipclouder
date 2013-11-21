@@ -6,11 +6,11 @@ require 'zipclouder/version'
 Gem::Specification.new do |spec|
   spec.name          = "zipclouder"
   spec.version       = Zipclouder::VERSION
-  spec.authors       = ["s-kobayashi"]
+  spec.authors       = ["web-reshio"]
   spec.email         = ["s.kobayashi07@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A Ruby library for zipcloud API. https://github.com/web-reshio/zipclouder }
+  spec.summary       = %q{A Ruby library for zipcloud API}
+  spec.homepage      = "https://github.com/web-reshio/zipclouder"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
