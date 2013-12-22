@@ -25,7 +25,7 @@ class Zipclouder < Hashie::Mash
   end
 
   def success?
-    status.eql?(200)
+    status.eql?(200) and results.present?
   end
 
   def address
@@ -56,18 +56,17 @@ class Zipclouder < Hashie::Mash
 
   def result
     if success?
-      if results.present?
-        if results.one?
-          results.first
-        else
-          "Error::Multpul Results"
-        end
-
+      if results.one?
+        results.first
+      else
+        "Error::Multpul Results"
+      end
+    else
+      if error_message.present?
+        error_message
       else
         "Error::No Result"
       end
-    else
-      error_message
     end
   end
 
