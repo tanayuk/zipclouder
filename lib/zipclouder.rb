@@ -56,10 +56,15 @@ class Zipclouder < Hashie::Mash
 
   def result
     if success?
-      if results.one?
-        results.first
+      if results.present?
+        if results.one?
+          results.first
+        else
+          "Error::Multpul Results"
+        end
+
       else
-        "Error::Multpul Results"
+        "Error::No Result"
       end
     else
       error_message
